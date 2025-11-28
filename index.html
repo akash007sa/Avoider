@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sky Shooter</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('./sw.js').catch(console.error);
+    }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Sky Shooter</h1>
+    <canvas id="gameCanvas" width="800" height="540"></canvas>
+    <div class="controls">
+      <button id="startBtn">Start / Restart</button>
+      <button id="pauseBtn">Pause</button>
+      <div id="hud">Score: 0 &nbsp; Lives: 3 &nbsp; Level: 1</div>
+    </div>
+    <p class="hint">Move: Arrow keys / A D or touch drag. Shoot: Space / Tap top half.</p>
+  </div>
+<script src="game.js"></script>
+</body>
+</html>

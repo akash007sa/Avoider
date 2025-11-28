@@ -1,0 +1,2 @@
+# Avoider
+Simple HTML game
